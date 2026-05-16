@@ -41,7 +41,7 @@ function seedNodes() {
       y: Math.random() * window.innerHeight,
       length: Math.random() * 180 + 180,
       speed: Math.random() * 0.85 + 0.45,
-      alpha: Math.random() * 0.16 + 0.08
+      alpha: Math.random() * 0.2 + 0.16
     });
   }
 }
@@ -52,9 +52,9 @@ function drawNetwork() {
   const height = window.innerHeight;
 
   const wash = ctx.createLinearGradient(0, 0, width, height);
-  wash.addColorStop(0, "rgba(13, 124, 134, 0.04)");
-  wash.addColorStop(0.48, "rgba(255, 255, 255, 0.02)");
-  wash.addColorStop(1, "rgba(200, 90, 60, 0.035)");
+  wash.addColorStop(0, "rgba(13, 124, 134, 0.08)");
+  wash.addColorStop(0.48, "rgba(255, 255, 255, 0.018)");
+  wash.addColorStop(1, "rgba(200, 90, 60, 0.07)");
   ctx.fillStyle = wash;
   ctx.fillRect(0, 0, width, height);
 
@@ -76,9 +76,9 @@ function drawNetwork() {
     );
     beam.addColorStop(0, "rgba(13, 124, 134, 0)");
     beam.addColorStop(0.5, `rgba(13, 124, 134, ${stream.alpha})`);
-    beam.addColorStop(1, "rgba(200, 90, 60, 0)");
+    beam.addColorStop(1, "rgba(200, 90, 60, 0.02)");
     ctx.strokeStyle = beam;
-    ctx.lineWidth = 1.2;
+    ctx.lineWidth = 1.8;
     ctx.beginPath();
     ctx.moveTo(stream.x, stream.y);
     ctx.lineTo(stream.x + stream.length, stream.y - stream.length * 0.34);
@@ -109,9 +109,9 @@ function drawNetwork() {
     if (node.y > height + 24) node.y = -24;
 
     const nodeColors = [
-      "rgba(13, 124, 134, 0.46)",
-      "rgba(200, 90, 60, 0.36)",
-      "rgba(184, 138, 39, 0.32)"
+      "rgba(13, 124, 134, 0.78)",
+      "rgba(200, 90, 60, 0.68)",
+      "rgba(184, 138, 39, 0.62)"
     ];
     ctx.fillStyle = nodeColors[node.hue];
     ctx.beginPath();
@@ -124,9 +124,9 @@ function drawNetwork() {
       const dy = node.y - other.y;
       const distance = Math.sqrt(dx * dx + dy * dy);
       if (distance < 150) {
-        ctx.globalAlpha = (1 - distance / 150) * 0.88;
-        ctx.strokeStyle = node.hue === 1 ? "rgba(200, 90, 60, 0.18)" : "rgba(13, 124, 134, 0.18)";
-        ctx.lineWidth = 0.9;
+        ctx.globalAlpha = (1 - distance / 150) * 1;
+        ctx.strokeStyle = node.hue === 1 ? "rgba(200, 90, 60, 0.32)" : "rgba(13, 124, 134, 0.32)";
+        ctx.lineWidth = 1.15;
         ctx.beginPath();
         ctx.moveTo(node.x, node.y);
         ctx.lineTo(other.x, other.y);
@@ -138,9 +138,9 @@ function drawNetwork() {
     const pointerDy = node.y - pointer.y;
     const pointerDistance = Math.sqrt(pointerDx * pointerDx + pointerDy * pointerDy);
     if (pointerDistance < 180) {
-      ctx.globalAlpha = (1 - pointerDistance / 180) * 0.72;
-      ctx.strokeStyle = "rgba(6, 78, 86, 0.3)";
-      ctx.lineWidth = 1.1;
+      ctx.globalAlpha = (1 - pointerDistance / 180) * 0.95;
+      ctx.strokeStyle = "rgba(6, 78, 86, 0.48)";
+      ctx.lineWidth = 1.45;
       ctx.beginPath();
       ctx.moveTo(node.x, node.y);
       ctx.lineTo(pointer.x, pointer.y);
