@@ -333,16 +333,16 @@ dd {
 
 .education-card {
   display: grid;
-  grid-template-columns: 148px minmax(0, 1fr);
+  grid-template-columns: 166px minmax(0, 1fr);
   align-items: center;
   gap: 22px;
-  min-height: 180px;
+  min-height: 194px;
 }
 
 .education-logo {
   display: grid;
-  width: 148px;
-  height: 128px;
+  width: 166px;
+  height: 154px;
   place-items: center;
 }
 
@@ -366,8 +366,8 @@ dd {
 
 .education-logo-uh img {
   width: auto;
-  max-width: 148px;
-  height: 132px;
+  max-width: 166px;
+  height: 150px;
   border-radius: var(--radius);
 }
 
