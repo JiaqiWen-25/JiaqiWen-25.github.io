@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jiaqi Wen | AI Researcher</title>
+  <meta name="description" content="Personal website of Jiaqi Wen, Ph.D. student in Computer Science at the University of Houston. Research in probabilistic ML, trustworthy AI, AI for science, reinforcement learning, and causality.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="research-canvas" aria-hidden="true"></canvas>
+  <div class="progress" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Jiaqi Wen home">
+      <span>JW</span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="CV_WENJIAQI.pdf" target="_blank" rel="noopener">CV</a>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Ph.D. Student · Computer Science · University of Houston</p>
+        <h1>Jiaqi Wen</h1>
+        <p class="hero-lede">
+          I study robust and trustworthy machine learning systems, with current work on generative distributionally robust learning, decision-focused learning, and goal recognition.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#publications">View Publications</a>
+          <a class="button secondary" href="CV_WENJIAQI.pdf" target="_blank" rel="noopener">Download CV</a>
+        </div>
+      </div>
+
+      <aside class="signal-panel reveal" aria-label="Research profile summary">
+        <div class="signal-ring">
+          <span>AI</span>
+        </div>
+        <dl>
+          <div>
+            <dt>Focus</dt>
+            <dd>Probabilistic ML, Trustworthy AI, AI for Science</dd>
+          </div>
+          <div>
+            <dt>Current</dt>
+            <dd>Generative Distributionally Robust Learning</dd>
+          </div>
+          <div>
+            <dt>Base</dt>
+            <dd>Houston, Texas</dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+
+    <section id="research" class="section-shell">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Research</p>
+        <h2>Building reliable learning systems for uncertain environments.</h2>
+      </div>
+      <div class="research-grid">
+        <article class="research-card reveal">
+          <span>01</span>
+          <h3>Distributionally Robust Optimization</h3>
+          <p>Generative ambiguity modeling for optimization systems that need to perform under distribution shift and uncertainty.</p>
+        </article>
+        <article class="research-card reveal">
+          <span>02</span>
+          <h3>Decision-Focused Learning</h3>
+          <p>Learning methods that connect prediction quality with downstream decisions, including 3D and diffusion-augmented settings.</p>
+        </article>
+        <article class="research-card reveal">
+          <span>03</span>
+          <h3>Goal Recognition & Causality</h3>
+          <p>Variational and causal approaches for long-term goal recognition and interpretable AI reasoning.</p>
+        </article>
+        <article class="research-card reveal">
+          <span>04</span>
+          <h3>3D Perception Systems</h3>
+          <p>Point-cloud segmentation, measurement, recognition, and automated evaluation systems used in commercial deployments.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications" class="section-shell split-section">
+      <div class="section-heading sticky-heading reveal">
+        <p class="eyebrow">Publications</p>
+        <h2>Recent papers and accepted work.</h2>
+        <div class="filter-bar" aria-label="Publication filters">
+          <button class="filter active" type="button" data-filter="all">All</button>
+          <button class="filter" type="button" data-filter="robust">Robust ML</button>
+          <button class="filter" type="button" data-filter="goal">Goal Recognition</button>
+          <button class="filter" type="button" data-filter="systems">Systems</button>
+        </div>
+      </div>
+      <div class="publication-list">
+        <article class="publication reveal" data-tags="robust">
+          <time>2026</time>
+          <h3>Distributionally Robust Optimization via Generative Ambiguity Modeling</h3>
+          <p>J. Wen and J. Yang. ICLR 2026.</p>
+        </article>
+        <article class="publication reveal" data-tags="robust">
+          <time>2025</time>
+          <h3>Distributionally Robust Optimization via Diffusion Ambiguity Modeling</h3>
+          <p>J. Wen and J. Yang. NeurIPS OPT 2025.</p>
+        </article>
+        <article class="publication reveal" data-tags="robust systems">
+          <time>2025</time>
+          <h3>3D-Learning: Diffusion-Augmented Distributionally Robust Decision-Focused Learning</h3>
+          <p>J. Wen, L. Fan, and J. Yang. INFOCOM 2026.</p>
+        </article>
+        <article class="publication reveal" data-tags="goal">
+          <time>2024</time>
+          <h3>Goal Recognition via Variational Causality</h3>
+          <p>J. Wen and L. Amado. AAMAS 2025.</p>
+        </article>
+        <article class="publication reveal" data-tags="systems">
+          <time>2022</time>
+          <h3>Spectral-Pointer Network: Pre-sort Leads the Pointer Network to Elude the TSP Vortex</h3>
+          <p>J. Wen. CVIDL & ICCEA 2022.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section-shell split-section">
+      <div class="section-heading sticky-heading reveal">
+        <p class="eyebrow">Experience</p>
+        <h2>Research, engineering, and production AI systems.</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <time>2025 - Present</time>
+          <h3>Research Assistant · University of Houston</h3>
+          <p>Working with Dr. Jianyi Yang on generative distributionally robust learning, spanning theoretical foundations and practical applications.</p>
+        </article>
+        <article class="timeline-item reveal">
+          <time>2024</time>
+          <h3>Research Assistant · University of Aberdeen</h3>
+          <p>Contributed to long-term goal recognition research with Prof. Felipe and Dr. Amado.</p>
+        </article>
+        <article class="timeline-item reveal">
+          <time>2022 - 2023</time>
+          <h3>Algorithm Engineer · Yuanyu Smart Data</h3>
+          <p>Developed 3D laser point-cloud segmentation, building measurement, floor-plane recognition, and distributed cluster systems used at CRLAND.</p>
+        </article>
+        <article class="timeline-item reveal">
+          <time>2019 - 2022</time>
+          <h3>Test Development Engineer · Goodix Technology</h3>
+          <p>Led TOF 3D sensor testing work, built point-cloud evaluation systems, contributed to depth-map completion models, and developed automation for face recognition and sensor testing.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="section-shell">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Education</p>
+        <h2>Interdisciplinary training across AI, computer science, and health science.</h2>
+      </div>
+      <div class="education-grid">
+        <article class="education-card reveal">
+          <time>2025 - Present</time>
+          <h3>Ph.D. in Computer Science</h3>
+          <p>University of Houston · USA</p>
+        </article>
+        <article class="education-card reveal">
+          <time>2023 - 2024</time>
+          <h3>MSc in Artificial Intelligence</h3>
+          <p>University of Aberdeen · Distinction · UK</p>
+        </article>
+        <article class="education-card reveal">
+          <time>2020 - 2024</time>
+          <h3>Master of Computer Science</h3>
+          <p>North China Electric Power University · China</p>
+        </article>
+        <article class="education-card reveal">
+          <time>2014 - 2018</time>
+          <h3>BSc in Health Inspection and Quarantine</h3>
+          <p>Guangdong Pharmaceutical University · China</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-shell skills-awards">
+      <div class="skill-block reveal">
+        <p class="eyebrow">Skills</p>
+        <h2>Technical Stack</h2>
+        <div class="chips">
+          <span>Python</span>
+          <span>PyTorch</span>
+          <span>TensorFlow</span>
+          <span>Open3D</span>
+          <span>NumPy</span>
+          <span>Pandas</span>
+          <span>scikit-learn</span>
+          <span>Matplotlib</span>
+          <span>OpenCV</span>
+          <span>MATLAB</span>
+          <span>SPSS</span>
+          <span>SAS</span>
+        </div>
+      </div>
+      <div class="award-block reveal">
+        <p class="eyebrow">Awards</p>
+        <h2>Selected Honors</h2>
+        <ul class="award-list">
+          <li><strong>2025</strong> NSM Graduate Student Conference Travel Award</li>
+          <li><strong>2023</strong> Aberdeen Global Scholarship</li>
+          <li><strong>2018</strong> Honor of Outstanding Worker</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section-shell reveal">
+      <p class="eyebrow">Contact</p>
+      <h2>Open to research collaboration in robust ML, trustworthy AI, and applied 3D intelligence.</h2>
+      <div class="contact-actions">
+        <a class="button primary" href="mailto:jwen5@cougarnet.uh.edu">jwen5@cougarnet.uh.edu</a>
+        <a class="button secondary" href="tel:+17134494530">+1 713 449 4530</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Jiaqi Wen</span>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
