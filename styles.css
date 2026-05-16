@@ -494,6 +494,18 @@ dd {
   object-fit: contain;
 }
 
+.company-logo-circle img {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+}
+
+.company-logo-shield img {
+  width: auto;
+  height: 54px;
+  border-radius: var(--radius);
+}
+
 .company-link {
   display: inline-flex;
   margin-top: 6px;
