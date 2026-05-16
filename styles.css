@@ -491,8 +491,6 @@ dd {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: rgba(13, 124, 134, 0.42) transparent;
-  mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 88px), transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 88px), transparent 100%);
 }
 
 .publication-list {
@@ -519,9 +517,28 @@ dd {
   background: rgba(13, 124, 134, 0.34);
 }
 
+.publication-list.has-scroll-after,
+.timeline.has-scroll-after {
+  mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 88px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 88px), transparent 100%);
+}
+
+.publication-list.has-scroll-before,
+.timeline.has-scroll-before {
+  mask-image: linear-gradient(to bottom, transparent 0, #000 64px, #000 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 64px, #000 100%);
+}
+
+.publication-list.has-scroll-before.has-scroll-after,
+.timeline.has-scroll-before.has-scroll-after {
+  mask-image: linear-gradient(to bottom, transparent 0, #000 64px, #000 calc(100% - 88px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 64px, #000 calc(100% - 88px), transparent 100%);
+}
+
 .publication,
 .timeline-item {
   position: relative;
+  min-height: var(--scroll-item-height);
   padding: 22px 24px 22px 30px;
   overflow: hidden;
 }

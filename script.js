@@ -179,8 +179,23 @@ function sortPublicationsByDate() {
     .forEach(publication => list.appendChild(publication));
 }
 
+function updateScrollableLists() {
+  document.querySelectorAll(".publication-list, .timeline").forEach(list => {
+    const maxScroll = list.scrollHeight - list.clientHeight;
+    const hasOverflow = maxScroll > 1;
+    const hasScrollBefore = hasOverflow && list.scrollTop > 1;
+    const hasScrollAfter = hasOverflow && list.scrollTop < maxScroll - 1;
+
+    list.classList.toggle("has-scroll-before", hasScrollBefore);
+    list.classList.toggle("has-scroll-after", hasScrollAfter);
+  });
+}
+
 sortPublicationsByDate();
 document.querySelectorAll(".reveal").forEach(element => revealObserver.observe(element));
+document.querySelectorAll(".publication-list, .timeline").forEach(list => {
+  list.addEventListener("scroll", updateScrollableLists, { passive: true });
+});
 
 document.querySelectorAll(".filter").forEach(button => {
   button.addEventListener("click", () => {
@@ -191,6 +206,7 @@ document.querySelectorAll(".filter").forEach(button => {
       const tags = publication.dataset.tags.split(" ");
       publication.classList.toggle("hidden", filter !== "all" && !tags.includes(filter));
     });
+    updateScrollableLists();
   });
 });
 
@@ -208,6 +224,7 @@ window.addEventListener("pointerleave", () => {
 window.addEventListener("resize", () => {
   resizeCanvas();
   seedNodes();
+  updateScrollableLists();
   if (reduceMotion) drawNetwork();
 });
 
@@ -215,3 +232,4 @@ resizeCanvas();
 seedNodes();
 drawNetwork();
 updateProgress();
+updateScrollableLists();
