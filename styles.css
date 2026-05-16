@@ -23,15 +23,44 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   min-width: 320px;
   color: var(--ink);
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background:
-    radial-gradient(circle at 14% 8%, rgba(13, 124, 134, 0.18), transparent 30rem),
-    radial-gradient(circle at 85% 20%, rgba(200, 90, 60, 0.14), transparent 28rem),
-    linear-gradient(135deg, #f7fbfa 0%, #f4f1ea 47%, #f7f8f5 100%);
+    linear-gradient(120deg, rgba(13, 124, 134, 0.14), transparent 30%),
+    linear-gradient(235deg, rgba(200, 90, 60, 0.12), transparent 34%),
+    linear-gradient(135deg, #f7fbfa 0%, #f3f4ee 44%, #f8faf7 100%);
   line-height: 1.6;
+}
+
+body::before,
+body::after {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  content: "";
+}
+
+body::before {
+  opacity: 0.58;
+  background:
+    linear-gradient(115deg, transparent 0 18%, rgba(13, 124, 134, 0.16) 26%, transparent 42%),
+    linear-gradient(295deg, transparent 0 22%, rgba(184, 138, 39, 0.12) 35%, transparent 54%),
+    linear-gradient(18deg, transparent 0 38%, rgba(200, 90, 60, 0.12) 48%, transparent 68%);
+  filter: blur(16px);
+  animation: aurora-drift 18s ease-in-out infinite alternate;
+}
+
+body::after {
+  opacity: 0.22;
+  background-image:
+    linear-gradient(rgba(6, 78, 86, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 78, 86, 0.12) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent 78%);
 }
 
 body.menu-open {
@@ -49,7 +78,7 @@ a {
   z-index: -1;
   width: 100%;
   height: 100%;
-  opacity: 0.68;
+  opacity: 0.9;
 }
 
 .progress {
@@ -254,6 +283,16 @@ h3 {
 @keyframes spin {
   to {
     --angle: 360deg;
+  }
+}
+
+@keyframes aurora-drift {
+  0% {
+    transform: translate3d(-2%, -1%, 0) scale(1.04) rotate(-1deg);
+  }
+
+  100% {
+    transform: translate3d(2%, 1.5%, 0) scale(1.08) rotate(1deg);
   }
 }
 
@@ -780,5 +819,9 @@ time {
 
   #research-canvas {
     display: none;
+  }
+
+  body::before {
+    animation: none;
   }
 }
