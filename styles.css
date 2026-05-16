@@ -311,28 +311,35 @@ dd {
 
 .education-card {
   display: grid;
-  grid-template-columns: 84px minmax(0, 1fr);
+  grid-template-columns: 126px minmax(0, 1fr);
   align-items: center;
-  gap: 18px;
-  min-height: 150px;
+  gap: 22px;
+  min-height: 166px;
 }
 
 .education-logo {
   display: grid;
-  width: 84px;
-  height: 84px;
+  width: 126px;
+  height: 116px;
   place-items: center;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(20, 31, 46, 0.1);
-  border-radius: var(--radius);
 }
 
 .education-logo img {
   display: block;
-  width: 100%;
-  height: 100%;
   object-fit: contain;
+}
+
+.education-logo-circle img {
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+}
+
+.education-logo-shield img {
+  width: auto;
+  max-width: 126px;
+  height: 108px;
+  border-radius: var(--radius);
 }
 
 .research-card span {
@@ -596,13 +603,24 @@ time {
   }
 
   .education-card {
-    grid-template-columns: 72px minmax(0, 1fr);
-    min-height: 132px;
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 16px;
+    min-height: 142px;
   }
 
   .education-logo {
-    width: 72px;
-    height: 72px;
+    width: 96px;
+    height: 92px;
+  }
+
+  .education-logo-circle img {
+    width: 88px;
+    height: 88px;
+  }
+
+  .education-logo-shield img {
+    max-width: 96px;
+    height: 88px;
   }
 
   .contact {

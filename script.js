@@ -84,6 +84,16 @@ const revealObserver = new IntersectionObserver(
   { threshold: 0.16 }
 );
 
+function sortPublicationsByDate() {
+  const list = document.querySelector(".publication-list");
+  if (!list) return;
+
+  [...list.querySelectorAll(".publication")]
+    .sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date))
+    .forEach(publication => list.appendChild(publication));
+}
+
+sortPublicationsByDate();
 document.querySelectorAll(".reveal").forEach(element => revealObserver.observe(element));
 
 document.querySelectorAll(".filter").forEach(button => {
