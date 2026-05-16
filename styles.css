@@ -309,6 +309,32 @@ dd {
   padding: 22px;
 }
 
+.education-card {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr);
+  align-items: center;
+  gap: 18px;
+  min-height: 150px;
+}
+
+.education-logo {
+  display: grid;
+  width: 84px;
+  height: 84px;
+  place-items: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(20, 31, 46, 0.1);
+  border-radius: var(--radius);
+}
+
+.education-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .research-card span {
   display: inline-flex;
   margin-bottom: 44px;
@@ -534,6 +560,16 @@ time {
   .research-grid,
   .education-grid {
     grid-template-columns: 1fr;
+  }
+
+  .education-card {
+    grid-template-columns: 72px minmax(0, 1fr);
+    min-height: 132px;
+  }
+
+  .education-logo {
+    width: 72px;
+    height: 72px;
   }
 
   .contact {
