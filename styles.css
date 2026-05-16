@@ -367,7 +367,7 @@ dd {
 .education-logo-uh img {
   width: auto;
   max-width: 148px;
-  height: 124px;
+  height: 132px;
   border-radius: var(--radius);
 }
 
@@ -534,9 +534,9 @@ dd {
 }
 
 .company-logo-aberdeen img {
-  width: 64px;
-  height: 64px;
-  max-height: 64px;
+  width: 76px;
+  height: 76px;
+  max-height: 76px;
   border-radius: 0;
 }
 
@@ -728,7 +728,7 @@ time {
 
   .education-logo-uh img {
     max-width: 104px;
-    height: 96px;
+    height: 102px;
   }
 
   .education-logo-aberdeen img {
