@@ -484,6 +484,39 @@ dd {
 .timeline {
   display: grid;
   gap: 14px;
+  max-height: calc((var(--scroll-item-height) * 5) + (14px * 4));
+  padding-right: 8px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(13, 124, 134, 0.42) transparent;
+  mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 88px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 88px), transparent 100%);
+}
+
+.publication-list {
+  --scroll-item-height: 126px;
+}
+
+.timeline {
+  --scroll-item-height: 166px;
+}
+
+.publication-list::-webkit-scrollbar,
+.timeline::-webkit-scrollbar {
+  width: 7px;
+}
+
+.publication-list::-webkit-scrollbar-track,
+.timeline::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.publication-list::-webkit-scrollbar-thumb,
+.timeline::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(13, 124, 134, 0.34);
 }
 
 .publication,
