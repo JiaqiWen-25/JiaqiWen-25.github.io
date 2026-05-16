@@ -500,10 +500,35 @@ dd {
   align-items: start;
 }
 
+.publication-ccf-a {
+  border-color: rgba(184, 138, 39, 0.42);
+  background: linear-gradient(90deg, rgba(184, 138, 39, 0.14), rgba(255, 255, 255, 0.78) 34%);
+}
+
+.publication-ccf-a::before {
+  background: linear-gradient(180deg, var(--gold), var(--coral));
+}
+
 .publication time,
 .publication h3,
 .publication p {
   grid-column: 1;
+}
+
+.ccf-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  margin-left: 8px;
+  padding: 3px 8px;
+  color: #6f4d04;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  white-space: nowrap;
+  border: 1px solid rgba(184, 138, 39, 0.36);
+  border-radius: 999px;
+  background: rgba(255, 246, 218, 0.9);
 }
 
 .paper-link {
