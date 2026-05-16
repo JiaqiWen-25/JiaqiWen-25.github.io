@@ -571,8 +571,8 @@ dd {
 
 .company-logo-uh img {
   width: auto;
-  height: 69px;
-  max-height: 69px;
+  height: 65px;
+  max-height: 65px;
   border-radius: var(--radius);
 }
 
