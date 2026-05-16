@@ -357,6 +357,13 @@ dd {
   border-radius: 50%;
 }
 
+.education-logo-ncepu img,
+.education-logo-gdpu img {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+}
+
 .education-logo-uh img {
   width: auto;
   max-width: 148px;
@@ -711,6 +718,12 @@ time {
   .education-logo-circle img {
     width: 92px;
     height: 92px;
+  }
+
+  .education-logo-ncepu img,
+  .education-logo-gdpu img {
+    width: 82px;
+    height: 82px;
   }
 
   .education-logo-uh img {
