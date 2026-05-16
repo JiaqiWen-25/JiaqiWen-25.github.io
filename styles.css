@@ -333,16 +333,16 @@ dd {
 
 .education-card {
   display: grid;
-  grid-template-columns: 126px minmax(0, 1fr);
+  grid-template-columns: 148px minmax(0, 1fr);
   align-items: center;
   gap: 22px;
-  min-height: 166px;
+  min-height: 180px;
 }
 
 .education-logo {
   display: grid;
-  width: 126px;
-  height: 116px;
+  width: 148px;
+  height: 128px;
   place-items: center;
 }
 
@@ -352,15 +352,28 @@ dd {
 }
 
 .education-logo-circle img {
-  width: 108px;
-  height: 108px;
+  width: 116px;
+  height: 116px;
   border-radius: 50%;
+}
+
+.education-logo-uh img {
+  width: auto;
+  max-width: 148px;
+  height: 112px;
+  border-radius: var(--radius);
+}
+
+.education-logo-aberdeen img {
+  width: 116px;
+  height: 116px;
+  border-radius: 0;
 }
 
 .education-logo-shield img {
   width: auto;
-  max-width: 126px;
-  height: 108px;
+  max-width: 148px;
+  height: 112px;
   border-radius: var(--radius);
 }
 
@@ -504,6 +517,20 @@ dd {
   width: auto;
   height: 54px;
   border-radius: var(--radius);
+}
+
+.company-logo-uh img {
+  width: auto;
+  height: 64px;
+  max-height: 64px;
+  border-radius: var(--radius);
+}
+
+.company-logo-aberdeen img {
+  width: 64px;
+  height: 64px;
+  max-height: 64px;
+  border-radius: 0;
 }
 
 .company-link {
@@ -671,23 +698,33 @@ time {
   }
 
   .education-card {
-    grid-template-columns: 96px minmax(0, 1fr);
+    grid-template-columns: 104px minmax(0, 1fr);
     gap: 16px;
-    min-height: 142px;
+    min-height: 148px;
   }
 
   .education-logo {
-    width: 96px;
-    height: 92px;
+    width: 104px;
+    height: 96px;
   }
 
   .education-logo-circle img {
-    width: 88px;
+    width: 92px;
+    height: 92px;
+  }
+
+  .education-logo-uh img {
+    max-width: 104px;
     height: 88px;
   }
 
+  .education-logo-aberdeen img {
+    width: 92px;
+    height: 92px;
+  }
+
   .education-logo-shield img {
-    max-width: 96px;
+    max-width: 104px;
     height: 88px;
   }
 
