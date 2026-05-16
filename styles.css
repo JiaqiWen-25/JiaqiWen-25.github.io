@@ -401,6 +401,39 @@ dd {
   overflow: hidden;
 }
 
+.publication {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 18px;
+  align-items: start;
+}
+
+.publication time,
+.publication h3,
+.publication p {
+  grid-column: 1;
+}
+
+.paper-link {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  align-self: center;
+  padding: 8px 12px;
+  color: var(--accent-strong);
+  font-size: 0.86rem;
+  font-weight: 800;
+  border: 1px solid rgba(13, 124, 134, 0.24);
+  border-radius: var(--radius);
+  background: rgba(245, 252, 251, 0.78);
+  transition: color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.paper-link:hover {
+  color: #fff;
+  background: var(--accent-strong);
+  transform: translateY(-1px);
+}
+
 .publication::before,
 .timeline-item::before {
   position: absolute;
@@ -579,6 +612,17 @@ time {
   .button,
   .contact-actions a {
     width: 100%;
+  }
+
+  .publication {
+    grid-template-columns: 1fr;
+  }
+
+  .paper-link {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: start;
+    margin-top: 4px;
   }
 }
 
