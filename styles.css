@@ -409,8 +409,8 @@ dd {
 
 .education-logo-uh img {
   width: auto;
-  max-width: 190px;
-  height: 190px;
+  max-width: 160px;
+  height: 160px;
   border-radius: var(--radius);
 }
 
