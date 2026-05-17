@@ -214,6 +214,36 @@ h3 {
   font-size: clamp(1.06rem, 2vw, 1.38rem);
 }
 
+.hero-advisor {
+  max-width: 720px;
+  margin-top: 24px;
+}
+
+.hero-advisor span {
+  display: block;
+  width: min(100%, 520px);
+  height: 1px;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg, rgba(13, 124, 134, 0.62), rgba(200, 90, 60, 0.24), transparent);
+}
+
+.hero-advisor p {
+  margin: 0;
+  color: #4f5d6f;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.hero-advisor a {
+  color: var(--accent-strong);
+  font-weight: 800;
+}
+
+.hero-advisor a:hover {
+  color: var(--coral);
+}
+
 .hero-actions,
 .contact-actions {
   display: flex;
@@ -319,14 +349,6 @@ dt {
 dd {
   margin: 3px 0 0;
   font-weight: 700;
-}
-
-dd a {
-  color: var(--accent-strong);
-}
-
-dd a:hover {
-  color: var(--coral);
 }
 
 .section-heading {
