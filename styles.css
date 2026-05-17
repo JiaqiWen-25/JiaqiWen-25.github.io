@@ -877,9 +877,16 @@ dd {
   padding: 0;
 }
 
-.company-logo-group > img {
+.collaboration-logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.collaboration-logo-row img {
   display: block;
-  max-width: 76px;
+  max-width: 58px;
   max-height: 38px;
   object-fit: contain;
 }
@@ -1101,9 +1108,13 @@ time {
     height: 30px;
   }
 
-  .company-logo-group > img {
-    max-width: 58px;
-    max-height: 32px;
+  .collaboration-logo-row {
+    gap: 7px;
+  }
+
+  .collaboration-logo-row img {
+    max-width: 42px;
+    max-height: 30px;
   }
 
   .company-logo img {
