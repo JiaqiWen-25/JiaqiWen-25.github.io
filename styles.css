@@ -228,11 +228,25 @@ h3 {
 }
 
 .hero-advisor h2 {
-  margin: 0 0 8px;
-  color: var(--ink);
-  font-size: 1rem;
+  position: relative;
+  width: fit-content;
+  margin: 0 0 12px;
+  color: var(--accent-strong);
+  font-size: clamp(1.18rem, 1.7vw, 1.34rem);
   font-weight: 800;
   line-height: 1.25;
+}
+
+.hero-advisor h2::after {
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  left: 0;
+  height: 3px;
+  border-radius: 999px;
+  content: "";
+  background: linear-gradient(90deg, var(--accent), var(--gold));
+  opacity: 0.72;
 }
 
 .hero-advisor p {
