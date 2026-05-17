@@ -839,12 +839,11 @@ dd {
   z-index: 0;
   content: "";
   background:
-    linear-gradient(120deg, transparent 0 24%, rgba(13, 124, 134, 0.16) 34%, rgba(184, 138, 39, 0.2) 46%, rgba(200, 90, 60, 0.14) 58%, transparent 72%),
-    linear-gradient(300deg, transparent 0 34%, rgba(255, 255, 255, 0.18) 50%, transparent 66%);
-  background-size: 260% 260%, 220% 220%;
-  background-position: 120% 50%, 0% 50%;
+    radial-gradient(circle at var(--glow-x, 50%) var(--glow-y, 50%), rgba(255, 255, 255, 0.48), rgba(184, 138, 39, 0.22) 22%, rgba(13, 124, 134, 0.2) 42%, transparent 68%),
+    conic-gradient(from 120deg at var(--glow-x, 50%) var(--glow-y, 50%), rgba(13, 124, 134, 0.22), rgba(184, 138, 39, 0.24), rgba(200, 90, 60, 0.18), rgba(13, 124, 134, 0.22));
+  filter: blur(0.2px);
   opacity: 0;
-  transition: opacity 260ms ease, background-position 900ms ease;
+  transition: opacity 220ms ease;
 }
 
 .nav-cta:hover::before,
@@ -852,7 +851,6 @@ dd {
 .filter:hover::before,
 .paper-link:hover::before,
 .abstract-toggle:hover::before {
-  background-position: 0% 50%, 100% 50%;
   opacity: 1;
 }
 

@@ -226,6 +226,21 @@ document.querySelectorAll(".abstract-toggle").forEach(button => {
   });
 });
 
+document.querySelectorAll(".nav-cta, .button, .filter, .paper-link, .abstract-toggle").forEach(element => {
+  element.addEventListener("pointermove", event => {
+    const rect = element.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width) * 100;
+    const y = ((event.clientY - rect.top) / rect.height) * 100;
+    element.style.setProperty("--glow-x", `${x}%`);
+    element.style.setProperty("--glow-y", `${y}%`);
+  }, { passive: true });
+
+  element.addEventListener("pointerleave", () => {
+    element.style.setProperty("--glow-x", "50%");
+    element.style.setProperty("--glow-y", "50%");
+  }, { passive: true });
+});
+
 document.querySelector("#year").textContent = new Date().getFullYear();
 
 window.addEventListener("scroll", updateProgress, { passive: true });
