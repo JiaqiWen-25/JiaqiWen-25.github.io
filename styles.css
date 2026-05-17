@@ -317,6 +317,11 @@ h3 {
   height: 24px;
 }
 
+.icon-button .github-icon {
+  width: 23px;
+  height: 23px;
+}
+
 .signal-panel {
   padding: 26px;
   background: var(--paper);
