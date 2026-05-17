@@ -146,6 +146,8 @@ main,
 }
 
 .nav-cta {
+  position: relative;
+  overflow: hidden;
   padding: 10px 18px;
   color: var(--accent-strong);
   font-weight: 800;
@@ -275,6 +277,8 @@ h3 {
 }
 
 .button {
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -586,6 +590,8 @@ dd {
 }
 
 .filter {
+  position: relative;
+  overflow: hidden;
   min-height: 38px;
   padding: 8px 14px;
   color: var(--muted);
@@ -804,6 +810,8 @@ dd {
 
 .paper-link,
 .abstract-toggle {
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
   min-height: 36px;
   align-items: center;
@@ -819,6 +827,40 @@ dd {
   background: rgba(245, 252, 251, 0.78);
   cursor: pointer;
   transition: color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.nav-cta::before,
+.button::before,
+.filter::before,
+.paper-link::before,
+.abstract-toggle::before {
+  position: absolute;
+  top: -40%;
+  bottom: -40%;
+  left: -75%;
+  z-index: 0;
+  width: 52%;
+  content: "";
+  background: linear-gradient(105deg, transparent 0%, rgba(255, 255, 255, 0.18) 30%, rgba(255, 255, 255, 0.72) 50%, rgba(255, 255, 255, 0.18) 70%, transparent 100%);
+  transform: translateX(0) skewX(-18deg);
+  transition: transform 620ms ease;
+}
+
+.nav-cta:hover::before,
+.button:hover::before,
+.filter:hover::before,
+.paper-link:hover::before,
+.abstract-toggle:hover::before {
+  transform: translateX(360%) skewX(-18deg);
+}
+
+.nav-cta > *,
+.button > *,
+.filter > *,
+.paper-link > *,
+.abstract-toggle > * {
+  position: relative;
+  z-index: 1;
 }
 
 .paper-link:hover,
@@ -1280,5 +1322,13 @@ time {
 
   body::before {
     animation: none;
+  }
+
+  .nav-cta::before,
+  .button::before,
+  .filter::before,
+  .paper-link::before,
+  .abstract-toggle::before {
+    display: none;
   }
 }
