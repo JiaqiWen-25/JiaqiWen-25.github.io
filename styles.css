@@ -617,7 +617,14 @@ dd {
 }
 
 .publication > p {
-  margin-left: 106px;
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  column-gap: 14px;
+  align-items: start;
+}
+
+.publication > p::before {
+  content: "";
 }
 
 .pub-venue-label {
@@ -944,7 +951,7 @@ time {
   }
 
   .publication > p {
-    margin-left: 0;
+    display: block;
   }
 
   .paper-link {
