@@ -783,7 +783,7 @@ dd {
 
 .company-heading {
   display: grid;
-  grid-template-columns: 132px minmax(0, 1fr);
+  grid-template-columns: 148px minmax(0, 1fr);
   align-items: center;
   gap: 18px;
   margin: 2px 0 12px;
@@ -791,15 +791,16 @@ dd {
 
 .company-logo {
   display: grid;
-  width: 132px;
-  height: 54px;
+  width: 148px;
+  height: 76px;
   place-items: center;
+  padding: 8px;
 }
 
 .company-logo img {
   display: block;
   max-width: 132px;
-  max-height: 54px;
+  max-height: 60px;
   object-fit: contain;
 }
 
@@ -1067,12 +1068,31 @@ time {
   }
 
   .company-heading {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    grid-template-columns: 104px minmax(0, 1fr);
+    gap: 16px;
   }
 
   .company-logo {
-    justify-content: start;
+    width: 104px;
+    height: 82px;
+    justify-content: center;
+    padding: 6px;
+  }
+
+  .company-logo img {
+    max-width: 92px;
+    max-height: 58px;
+  }
+
+  .company-logo-uh img {
+    height: 70px;
+    max-height: 70px;
+  }
+
+  .company-logo-aberdeen img {
+    width: 70px;
+    height: 70px;
+    max-height: 70px;
   }
 }
 
