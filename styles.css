@@ -603,22 +603,30 @@ dd {
   grid-column: 1;
 }
 
+.publication h3 {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  align-items: start;
+  column-gap: 14px;
+}
+
 .venue-label {
   display: inline-flex;
-  min-height: 26px;
+  width: fit-content;
+  min-width: 58px;
+  min-height: 23px;
   align-items: center;
   justify-content: center;
-  margin-right: 8px;
-  padding: 5px 9px;
+  margin-top: 1px;
+  padding: 4px 9px;
   color: #fff;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 800;
   line-height: 1;
-  vertical-align: 0.16em;
   white-space: nowrap;
-  border-radius: 6px;
-  background: linear-gradient(135deg, var(--accent-strong), var(--coral));
-  box-shadow: 0 8px 18px rgba(6, 78, 86, 0.16);
+  border-radius: 4px;
+  background: linear-gradient(135deg, #168b9c, var(--accent-strong));
+  box-shadow: 0 6px 14px rgba(6, 78, 86, 0.18);
 }
 
 .ccf-venue {
@@ -918,6 +926,11 @@ time {
 
   .publication {
     grid-template-columns: 1fr;
+  }
+
+  .publication h3 {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
   }
 
   .paper-link {
