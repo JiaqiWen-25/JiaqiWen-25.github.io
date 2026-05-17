@@ -598,38 +598,9 @@ dd {
 }
 
 .publication time,
-.publication-title,
-.publication > p,
-.abstract-panel {
+.publication h3,
+.publication p {
   grid-column: 1;
-}
-
-.publication-title {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 10px;
-  align-items: start;
-  margin-top: 8px;
-}
-
-.publication-title h3 {
-  margin: 0;
-}
-
-.venue-label {
-  display: inline-flex;
-  min-width: 58px;
-  min-height: 26px;
-  align-items: center;
-  justify-content: center;
-  padding: 4px 8px;
-  color: #fff;
-  font-size: 0.72rem;
-  font-weight: 800;
-  line-height: 1;
-  border-radius: 6px;
-  background: var(--accent-strong);
-  box-shadow: 0 8px 18px rgba(6, 78, 86, 0.14);
 }
 
 .ccf-venue {
@@ -640,53 +611,24 @@ dd {
   box-shadow: inset 0 -0.42em 0 rgba(184, 138, 39, 0.22);
 }
 
-.publication-actions {
+.paper-link {
   grid-column: 2;
   grid-row: 1 / span 3;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
   align-self: center;
-}
-
-.paper-link,
-.abstract-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 36px;
   padding: 8px 12px;
   color: var(--accent-strong);
   font-size: 0.86rem;
   font-weight: 800;
-  font-family: inherit;
-  line-height: 1;
   border: 1px solid rgba(13, 124, 134, 0.24);
   border-radius: var(--radius);
   background: rgba(245, 252, 251, 0.78);
-  cursor: pointer;
   transition: color 180ms ease, background 180ms ease, transform 180ms ease;
 }
 
-.paper-link:hover,
-.abstract-toggle:hover,
-.abstract-toggle[aria-expanded="true"] {
+.paper-link:hover {
   color: #fff;
   background: var(--accent-strong);
   transform: translateY(-1px);
-}
-
-.abstract-panel {
-  margin-top: 14px;
-  padding-top: 14px;
-  border-top: 1px solid rgba(13, 124, 134, 0.16);
-}
-
-.abstract-panel p {
-  margin: 0;
-  color: #4f5d6f;
-  font-size: 0.95rem;
-  line-height: 1.58;
 }
 
 .publication::before,
@@ -960,19 +902,9 @@ time {
     grid-template-columns: 1fr;
   }
 
-  .publication-title {
-    grid-template-columns: 1fr;
-  }
-
-  .venue-label {
-    justify-self: start;
-  }
-
-  .publication-actions {
+  .paper-link {
     grid-column: 1;
     grid-row: auto;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-self: start;
     margin-top: 4px;
   }
