@@ -460,6 +460,7 @@ dd {
   gap: 22px;
   min-height: 194px;
   overflow: hidden;
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .education-card > :not(.campus-wash) {
