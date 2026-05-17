@@ -312,6 +312,11 @@ h3 {
   object-fit: contain;
 }
 
+.icon-button .linkedin-icon {
+  width: 24px;
+  height: 24px;
+}
+
 .signal-panel {
   padding: 26px;
   background: var(--paper);
