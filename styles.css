@@ -864,7 +864,7 @@ dd {
   grid-row: 1 / span 3;
   display: grid;
   width: 148px;
-  min-height: 122px;
+  min-height: 132px;
   align-content: center;
   justify-items: center;
   gap: 9px;
@@ -873,7 +873,7 @@ dd {
 
 .company-logo-group .company-logo {
   width: 132px;
-  height: 34px;
+  height: 32px;
   padding: 0;
 }
 
@@ -886,14 +886,14 @@ dd {
 
 .collaboration-logo-row img {
   display: block;
-  max-width: 70px;
-  max-height: 46px;
+  max-width: 82px;
+  max-height: 56px;
   object-fit: contain;
 }
 
 .collaboration-logo-row .ut-logo {
-  max-width: 92px;
-  max-height: 64px;
+  max-width: 104px;
+  max-height: 72px;
 }
 
 .company-heading > div {
@@ -1103,14 +1103,14 @@ time {
 
   .company-logo-group {
     width: 104px;
-    min-height: 118px;
+    min-height: 128px;
     gap: 8px;
     padding: 6px;
   }
 
   .company-logo-group .company-logo {
     width: 92px;
-    height: 30px;
+    height: 28px;
   }
 
   .collaboration-logo-row {
@@ -1118,13 +1118,13 @@ time {
   }
 
   .collaboration-logo-row img {
-    max-width: 50px;
-    max-height: 36px;
+    max-width: 58px;
+    max-height: 42px;
   }
 
   .collaboration-logo-row .ut-logo {
-    max-width: 70px;
-    max-height: 50px;
+    max-width: 78px;
+    max-height: 56px;
   }
 
   .company-logo img {
