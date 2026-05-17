@@ -616,6 +616,10 @@ dd {
   margin: 0;
 }
 
+.publication > p {
+  margin-left: 106px;
+}
+
 .pub-venue-label {
   display: inline-flex;
   width: fit-content;
@@ -937,6 +941,10 @@ time {
   .publication-heading {
     grid-template-columns: 1fr;
     row-gap: 8px;
+  }
+
+  .publication > p {
+    margin-left: 0;
   }
 
   .paper-link {
