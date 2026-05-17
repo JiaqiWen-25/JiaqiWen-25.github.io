@@ -321,6 +321,14 @@ dd {
   font-weight: 700;
 }
 
+dd a {
+  color: var(--accent-strong);
+}
+
+dd a:hover {
+  color: var(--coral);
+}
+
 .section-heading {
   max-width: 820px;
   margin-bottom: 30px;
