@@ -582,10 +582,8 @@ dd {
 }
 
 .publication {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  column-gap: 18px;
-  align-items: start;
+  display: block;
+  overflow: visible;
 }
 
 .publication-ccf-a {
@@ -597,23 +595,17 @@ dd {
   background: linear-gradient(180deg, var(--gold), var(--coral));
 }
 
-.publication time,
-.publication-title,
-.publication > p,
-.abstract-panel {
-  grid-column: 1;
-}
-
 .publication-title {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
   gap: 10px;
-  align-items: start;
-  margin-top: 8px;
+  align-items: center;
+  margin-top: 6px;
 }
 
 .publication-title h3 {
   margin: 0;
+  min-width: 0;
 }
 
 .venue-label {
@@ -641,12 +633,11 @@ dd {
 }
 
 .publication-actions {
-  grid-column: 2;
-  grid-row: 1 / span 3;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 8px;
-  align-self: center;
+  margin-top: 12px;
 }
 
 .paper-link,
@@ -956,10 +947,6 @@ time {
     width: 100%;
   }
 
-  .publication {
-    grid-template-columns: 1fr;
-  }
-
   .publication-title {
     grid-template-columns: 1fr;
   }
@@ -969,10 +956,6 @@ time {
   }
 
   .publication-actions {
-    grid-column: 1;
-    grid-row: auto;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-self: start;
     margin-top: 4px;
   }
