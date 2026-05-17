@@ -590,7 +590,7 @@ dd {
 
 .publication-ccf-a {
   border-color: rgba(184, 138, 39, 0.42);
-  background: linear-gradient(90deg, rgba(184, 138, 39, 0.14), rgba(255, 255, 255, 0.78) 34%);
+  background: linear-gradient(90deg, rgba(184, 138, 39, 0.18), rgba(246, 229, 178, 0.28) 46%, rgba(255, 255, 255, 0.76) 72%);
 }
 
 .publication-ccf-a::before {
