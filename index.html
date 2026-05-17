@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260517-news">
+  <link rel="stylesheet" href="styles.css?v=20260517-abstracts">
 </head>
 <body>
   <canvas id="research-canvas" aria-hidden="true"></canvas>
@@ -152,7 +152,13 @@
             <h3>Distributionally Robust Optimization via Generative Ambiguity Modeling</h3>
           </div>
           <p><span>J. Wen and J. Yang. <span class="ccf-venue">ICLR 2026</span>.</span></p>
-          <a class="paper-link" href="https://arxiv.org/pdf/2602.08976" target="_blank" rel="noopener">Paper</a>
+          <div class="publication-actions">
+            <button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button>
+            <a class="paper-link" href="https://arxiv.org/pdf/2602.08976" target="_blank" rel="noopener">Paper</a>
+          </div>
+          <div class="abstract-panel" hidden>
+            <p>This work studies DRO through generative ambiguity sets that model adversarial distributions beyond the nominal support while preserving consistency with the nominal data. It introduces GAS-DRO and demonstrates stronger out-of-distribution generalization with a diffusion-model implementation.</p>
+          </div>
         </article>
         <article class="publication publication-ccf-a reveal" data-date="2025-10-27" data-tags="robust">
           <time>2025</time>
@@ -161,7 +167,13 @@
             <h3>Distributionally Robust Optimization via Diffusion Ambiguity Modeling</h3>
           </div>
           <p><span>J. Wen and J. Yang. <span class="ccf-venue">NeurIPS OPT 2025</span>.</span></p>
-          <a class="paper-link" href="https://arxiv.org/pdf/2510.22757" target="_blank" rel="noopener">Paper</a>
+          <div class="publication-actions">
+            <button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button>
+            <a class="paper-link" href="https://arxiv.org/pdf/2510.22757" target="_blank" rel="noopener">Paper</a>
+          </div>
+          <div class="abstract-panel" hidden>
+            <p>This paper designs diffusion-based ambiguity sets for DRO, enabling adversarial distributions outside the nominal support while remaining data-consistent. The proposed D-DRO algorithm improves out-of-distribution generalization in machine learning prediction tasks.</p>
+          </div>
         </article>
         <article class="publication publication-ccf-a reveal" data-date="2026-02-05" data-tags="robust systems">
           <time>2025</time>
@@ -170,7 +182,13 @@
             <h3>3D-Learning: Diffusion-Augmented Distributionally Robust Decision-Focused Learning</h3>
           </div>
           <p><span>J. Wen, L. Fan, and J. Yang. <span class="ccf-venue">INFOCOM 2026</span>.</span></p>
-          <a class="paper-link" href="https://arxiv.org/pdf/2602.02943" target="_blank" rel="noopener">Paper</a>
+          <div class="publication-actions">
+            <button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button>
+            <a class="paper-link" href="https://arxiv.org/pdf/2602.02943" target="_blank" rel="noopener">Paper</a>
+          </div>
+          <div class="abstract-panel" hidden>
+            <p>3D-Learning addresses out-of-distribution failures in predict-then-optimize systems by training predictors for worst-case downstream decision performance. It uses diffusion models to search realistic worst-case distributions and improves results on LLM resource provisioning.</p>
+          </div>
         </article>
         <article class="publication reveal" data-date="2026-04-14" data-tags="systems">
           <time>2026</time>
@@ -179,7 +197,13 @@
             <h3>WaterAdmin: Orchestrating Community Water Distribution Optimization via AI Agents</h3>
           </div>
           <p><span>J. Wen, P. Tang, S. Ren, and J. Yang.</span></p>
-          <a class="paper-link" href="https://arxiv.org/pdf/2604.10343" target="_blank" rel="noopener">Paper</a>
+          <div class="publication-actions">
+            <button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button>
+            <a class="paper-link" href="https://arxiv.org/pdf/2604.10343" target="_blank" rel="noopener">Paper</a>
+          </div>
+          <div class="abstract-panel" hidden>
+            <p>WaterAdmin combines LLM-based community context abstraction with optimization-based water-system control. The bi-level framework adapts pump and valve scheduling under dynamic community contexts and improves pressure reliability and energy consumption in EPANET simulations.</p>
+          </div>
         </article>
         <article class="publication reveal" data-date="2025-05-19" data-tags="goal">
           <time>2024</time>
@@ -188,7 +212,13 @@
             <h3>Goal Recognition via Variational Causality</h3>
           </div>
           <p><span>J. Wen and L. Amado. AAMAS 2025.</span></p>
-          <a class="paper-link" href="https://www.ifaamas.org/Proceedings/aamas2025/pdfs/p2162.pdf" target="_blank" rel="noopener">Paper</a>
+          <div class="publication-actions">
+            <button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button>
+            <a class="paper-link" href="https://www.ifaamas.org/Proceedings/aamas2025/pdfs/p2162.pdf" target="_blank" rel="noopener">Paper</a>
+          </div>
+          <div class="abstract-panel" hidden>
+            <p>This paper introduces a model-free goal recognition method that integrates causality through variational inference. The approach combines causal discovery, counterfactual inference, and trajectory-likelihood decision making, remaining robust under noisy observations.</p>
+          </div>
         </article>
         <article class="publication reveal" data-date="2022-06-24" data-tags="systems">
           <time>2022</time>
@@ -197,7 +227,13 @@
             <h3>Spectral-Pointer Network: Pre-sort Leads the Pointer Network to Elude the TSP Vortex</h3>
           </div>
           <p><span>J. Wen. CVIDL & ICCEA 2022.</span></p>
-          <a class="paper-link" href="https://ieeexplore.ieee.org/abstract/document/9825323" target="_blank" rel="noopener">Paper</a>
+          <div class="publication-actions">
+            <button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button>
+            <a class="paper-link" href="https://ieeexplore.ieee.org/abstract/document/9825323" target="_blank" rel="noopener">Paper</a>
+          </div>
+          <div class="abstract-panel" hidden>
+            <p>This work studies Pointer Network behavior on TSP-style optimization and proposes a spectral pre-sorting strategy to improve search stability and help the model avoid difficult tour-construction patterns.</p>
+          </div>
         </article>
       </div>
     </section>
