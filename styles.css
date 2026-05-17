@@ -3,7 +3,7 @@
   --ink: #17212f;
   --muted: #607086;
   --line: rgba(20, 31, 46, 0.13);
-  --paper: rgba(255, 255, 255, 0.7);
+  --paper: rgba(255, 255, 255, 0.76);
   --white: #ffffff;
   --accent: #0d7c86;
   --accent-strong: #064e56;
@@ -415,7 +415,7 @@ dd {
 .timeline-item,
 .skill-block,
 .award-block {
-  background: rgba(255, 255, 255, 0.66);
+  background: rgba(255, 255, 255, 0.72);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: 0 14px 44px rgba(21, 31, 46, 0.08);
