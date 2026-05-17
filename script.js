@@ -52,9 +52,9 @@ function drawNetwork() {
   const height = window.innerHeight;
 
   const wash = ctx.createLinearGradient(0, 0, width, height);
-  wash.addColorStop(0, "rgba(13, 124, 134, 0.08)");
-  wash.addColorStop(0.48, "rgba(255, 255, 255, 0.018)");
-  wash.addColorStop(1, "rgba(200, 90, 60, 0.07)");
+  wash.addColorStop(0, "rgba(13, 124, 134, 0.11)");
+  wash.addColorStop(0.48, "rgba(255, 255, 255, 0.012)");
+  wash.addColorStop(1, "rgba(200, 90, 60, 0.1)");
   ctx.fillStyle = wash;
   ctx.fillRect(0, 0, width, height);
 
@@ -75,8 +75,8 @@ function drawNetwork() {
       stream.y - stream.length * 0.34
     );
     beam.addColorStop(0, "rgba(13, 124, 134, 0)");
-    beam.addColorStop(0.5, `rgba(13, 124, 134, ${stream.alpha})`);
-    beam.addColorStop(1, "rgba(200, 90, 60, 0.02)");
+    beam.addColorStop(0.5, `rgba(13, 124, 134, ${stream.alpha + 0.08})`);
+    beam.addColorStop(1, "rgba(200, 90, 60, 0.06)");
     ctx.strokeStyle = beam;
     ctx.lineWidth = 1.8;
     ctx.beginPath();
@@ -109,9 +109,9 @@ function drawNetwork() {
     if (node.y > height + 24) node.y = -24;
 
     const nodeColors = [
-      "rgba(13, 124, 134, 0.78)",
-      "rgba(200, 90, 60, 0.68)",
-      "rgba(184, 138, 39, 0.62)"
+      "rgba(13, 124, 134, 0.88)",
+      "rgba(200, 90, 60, 0.78)",
+      "rgba(184, 138, 39, 0.72)"
     ];
     ctx.fillStyle = nodeColors[node.hue];
     ctx.beginPath();
@@ -123,10 +123,10 @@ function drawNetwork() {
       const dx = node.x - other.x;
       const dy = node.y - other.y;
       const distance = Math.sqrt(dx * dx + dy * dy);
-      if (distance < 150) {
-        ctx.globalAlpha = (1 - distance / 150) * 1;
-        ctx.strokeStyle = node.hue === 1 ? "rgba(200, 90, 60, 0.32)" : "rgba(13, 124, 134, 0.32)";
-        ctx.lineWidth = 1.15;
+      if (distance < 170) {
+        ctx.globalAlpha = (1 - distance / 170) * 1;
+        ctx.strokeStyle = node.hue === 1 ? "rgba(200, 90, 60, 0.42)" : "rgba(13, 124, 134, 0.42)";
+        ctx.lineWidth = 1.25;
         ctx.beginPath();
         ctx.moveTo(node.x, node.y);
         ctx.lineTo(other.x, other.y);
