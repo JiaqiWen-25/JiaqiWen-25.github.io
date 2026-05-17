@@ -789,6 +789,10 @@ dd {
   margin: 2px 0 12px;
 }
 
+.timeline-item > p {
+  margin-left: 166px;
+}
+
 .company-logo {
   display: grid;
   width: 148px;
@@ -1070,6 +1074,10 @@ time {
   .company-heading {
     grid-template-columns: 104px minmax(0, 1fr);
     gap: 16px;
+  }
+
+  .timeline-item > p {
+    margin-left: 120px;
   }
 
   .company-logo {
