@@ -867,7 +867,7 @@ dd {
   min-height: 122px;
   align-content: center;
   justify-items: center;
-  gap: 8px;
+  gap: 9px;
   padding: 8px;
 }
 
@@ -881,19 +881,19 @@ dd {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .collaboration-logo-row img {
   display: block;
-  max-width: 58px;
-  max-height: 38px;
+  max-width: 70px;
+  max-height: 46px;
   object-fit: contain;
 }
 
 .collaboration-logo-row .ut-logo {
-  max-width: 82px;
-  max-height: 56px;
+  max-width: 92px;
+  max-height: 64px;
 }
 
 .company-heading > div {
@@ -1104,7 +1104,7 @@ time {
   .company-logo-group {
     width: 104px;
     min-height: 118px;
-    gap: 7px;
+    gap: 8px;
     padding: 6px;
   }
 
@@ -1114,17 +1114,17 @@ time {
   }
 
   .collaboration-logo-row {
-    gap: 7px;
+    gap: 8px;
   }
 
   .collaboration-logo-row img {
-    max-width: 42px;
-    max-height: 30px;
+    max-width: 50px;
+    max-height: 36px;
   }
 
   .collaboration-logo-row .ut-logo {
-    max-width: 62px;
-    max-height: 44px;
+    max-width: 70px;
+    max-height: 50px;
   }
 
   .company-logo img {
