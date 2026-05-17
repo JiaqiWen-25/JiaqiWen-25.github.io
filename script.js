@@ -180,7 +180,7 @@ function sortPublicationsByDate() {
 }
 
 function updateScrollableLists() {
-  document.querySelectorAll(".publication-list, .timeline").forEach(list => {
+  document.querySelectorAll(".publication-list, .news-list, .timeline").forEach(list => {
     const maxScroll = list.scrollHeight - list.clientHeight;
     const hasOverflow = maxScroll > 1;
     const hasScrollBefore = hasOverflow && list.scrollTop > 1;
@@ -193,7 +193,7 @@ function updateScrollableLists() {
 
 sortPublicationsByDate();
 document.querySelectorAll(".reveal").forEach(element => revealObserver.observe(element));
-document.querySelectorAll(".publication-list, .timeline").forEach(list => {
+document.querySelectorAll(".publication-list, .news-list, .timeline").forEach(list => {
   list.addEventListener("scroll", updateScrollableLists, { passive: true });
 });
 

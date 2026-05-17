@@ -410,6 +410,7 @@ dd {
 
 .research-card,
 .education-card,
+.news-item,
 .publication,
 .timeline-item,
 .skill-block,
@@ -489,6 +490,7 @@ dd {
 
 .research-card p,
 .education-card p,
+.news-item p,
 .publication p,
 .timeline-item p,
 .contact h2 {
@@ -533,6 +535,7 @@ dd {
 }
 
 .publication-list,
+.news-list,
 .timeline {
   display: grid;
   gap: 14px;
@@ -549,43 +552,79 @@ dd {
   max-height: calc((var(--scroll-item-height) * 5) + (14px * 4));
 }
 
+.news-list {
+  max-height: calc((118px * 5) + (14px * 4));
+}
+
 .timeline {
   --scroll-item-height: 166px;
   max-height: calc((var(--scroll-item-height) * 5) + (14px * 4));
 }
 
 .publication-list::-webkit-scrollbar,
+.news-list::-webkit-scrollbar,
 .timeline::-webkit-scrollbar {
   width: 7px;
 }
 
 .publication-list::-webkit-scrollbar-track,
+.news-list::-webkit-scrollbar-track,
 .timeline::-webkit-scrollbar-track {
   background: transparent;
 }
 
 .publication-list::-webkit-scrollbar-thumb,
+.news-list::-webkit-scrollbar-thumb,
 .timeline::-webkit-scrollbar-thumb {
   border-radius: 999px;
   background: rgba(13, 124, 134, 0.34);
 }
 
 .publication-list.has-scroll-after,
+.news-list.has-scroll-after,
 .timeline.has-scroll-after {
   mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 88px), transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 88px), transparent 100%);
 }
 
 .publication-list.has-scroll-before,
+.news-list.has-scroll-before,
 .timeline.has-scroll-before {
   mask-image: linear-gradient(to bottom, transparent 0, #000 64px, #000 100%);
   -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 64px, #000 100%);
 }
 
 .publication-list.has-scroll-before.has-scroll-after,
+.news-list.has-scroll-before.has-scroll-after,
 .timeline.has-scroll-before.has-scroll-after {
   mask-image: linear-gradient(to bottom, transparent 0, #000 64px, #000 calc(100% - 88px), transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 64px, #000 calc(100% - 88px), transparent 100%);
+}
+
+.news-item {
+  position: relative;
+  min-height: 118px;
+  padding: 22px 24px 22px 30px;
+  overflow: hidden;
+}
+
+.news-item::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  content: "";
+  background: linear-gradient(180deg, var(--accent), var(--gold));
+}
+
+.news-item p {
+  margin: 0;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
+.news-item strong {
+  color: var(--ink);
+  font-weight: 800;
 }
 
 .publication,
