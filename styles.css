@@ -428,11 +428,53 @@ dd {
 }
 
 .education-card {
+  position: relative;
   display: grid;
   grid-template-columns: 166px minmax(0, 1fr);
   align-items: center;
   gap: 22px;
   min-height: 194px;
+  overflow: hidden;
+}
+
+.education-card > :not(.campus-wash) {
+  position: relative;
+  z-index: 1;
+}
+
+.campus-wash {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(54%, 380px);
+  pointer-events: none;
+  opacity: 0.34;
+  mix-blend-mode: multiply;
+  mask-image:
+    linear-gradient(to left, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.62) 38%, transparent 100%),
+    radial-gradient(circle at 100% 0, #000 0 46%, transparent 74%);
+  mask-composite: intersect;
+  -webkit-mask-image:
+    linear-gradient(to left, rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.62) 38%, transparent 100%),
+    radial-gradient(circle at 100% 0, #000 0 46%, transparent 74%);
+  -webkit-mask-composite: source-in;
+}
+
+.campus-wash::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(135deg, rgba(13, 124, 134, 0.16), transparent 42%),
+    radial-gradient(circle at 100% 0, rgba(184, 138, 39, 0.2), transparent 54%);
+}
+
+.campus-wash img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .education-logo {
@@ -1052,6 +1094,11 @@ time {
     grid-template-columns: 104px minmax(0, 1fr);
     gap: 16px;
     min-height: 148px;
+  }
+
+  .campus-wash {
+    width: 48%;
+    opacity: 0.24;
   }
 
   .education-logo {
