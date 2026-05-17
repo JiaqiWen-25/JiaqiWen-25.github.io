@@ -640,6 +640,7 @@ dd {
   grid-template-columns: minmax(0, 1fr) auto;
   column-gap: 18px;
   align-items: start;
+  overflow: visible;
 }
 
 .publication-ccf-a {
@@ -1058,6 +1059,11 @@ time {
     flex-wrap: wrap;
     justify-self: start;
     margin-top: 4px;
+  }
+
+  .publication-actions .paper-link,
+  .publication-actions .abstract-toggle {
+    min-width: 92px;
   }
 
   .company-heading {

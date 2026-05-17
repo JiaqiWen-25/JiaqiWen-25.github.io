@@ -219,6 +219,10 @@ document.querySelectorAll(".abstract-toggle").forEach(button => {
     button.setAttribute("aria-expanded", String(!isExpanded));
     panel.hidden = isExpanded;
     updateScrollableLists();
+
+    if (!isExpanded && window.matchMedia("(max-width: 640px)").matches) {
+      panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
   });
 });
 
