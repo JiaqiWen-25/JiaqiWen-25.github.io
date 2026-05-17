@@ -598,19 +598,25 @@ dd {
 }
 
 .publication time,
-.publication h3,
+.publication-heading,
 .publication p {
   grid-column: 1;
 }
 
-.publication h3 {
+.publication-heading {
   display: grid;
   grid-template-columns: 92px minmax(0, 1fr);
   align-items: start;
   column-gap: 14px;
+  margin-top: 2px;
 }
 
-.venue-label {
+.publication-heading h3 {
+  min-width: 0;
+  margin: 0;
+}
+
+.pub-venue-label {
   display: inline-flex;
   width: fit-content;
   min-width: 58px;
@@ -928,7 +934,7 @@ time {
     grid-template-columns: 1fr;
   }
 
-  .publication h3 {
+  .publication-heading {
     grid-template-columns: 1fr;
     row-gap: 8px;
   }
