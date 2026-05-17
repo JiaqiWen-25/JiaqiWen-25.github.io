@@ -835,15 +835,16 @@ dd {
 .paper-link::before,
 .abstract-toggle::before {
   position: absolute;
-  top: -40%;
-  bottom: -40%;
-  left: -75%;
+  inset: -2px;
   z-index: 0;
-  width: 52%;
   content: "";
-  background: linear-gradient(105deg, transparent 0%, rgba(255, 255, 255, 0.18) 30%, rgba(255, 255, 255, 0.72) 50%, rgba(255, 255, 255, 0.18) 70%, transparent 100%);
-  transform: translateX(0) skewX(-18deg);
-  transition: transform 620ms ease;
+  background:
+    linear-gradient(120deg, transparent 0 24%, rgba(13, 124, 134, 0.16) 34%, rgba(184, 138, 39, 0.2) 46%, rgba(200, 90, 60, 0.14) 58%, transparent 72%),
+    linear-gradient(300deg, transparent 0 34%, rgba(255, 255, 255, 0.18) 50%, transparent 66%);
+  background-size: 260% 260%, 220% 220%;
+  background-position: 120% 50%, 0% 50%;
+  opacity: 0;
+  transition: opacity 260ms ease, background-position 900ms ease;
 }
 
 .nav-cta:hover::before,
@@ -851,7 +852,8 @@ dd {
 .filter:hover::before,
 .paper-link:hover::before,
 .abstract-toggle:hover::before {
-  transform: translateX(360%) skewX(-18deg);
+  background-position: 0% 50%, 100% 50%;
+  opacity: 1;
 }
 
 .nav-cta > *,
