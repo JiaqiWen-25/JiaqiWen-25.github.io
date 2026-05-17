@@ -540,6 +540,11 @@ dd {
   color: var(--muted);
 }
 
+.education-card p {
+  color: #4f5d6f;
+  font-weight: 750;
+}
+
 .split-section {
   display: grid;
   grid-template-columns: minmax(250px, 0.7fr) minmax(0, 1fr);
