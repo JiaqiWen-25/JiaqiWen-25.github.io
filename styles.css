@@ -991,6 +991,42 @@ time {
   .research-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .company-heading {
+    display: contents;
+  }
+
+  .timeline-item {
+    grid-template-columns: 104px minmax(0, 1fr);
+    column-gap: 16px;
+  }
+
+  .timeline-item > p {
+    margin-left: 0;
+  }
+
+  .company-logo {
+    width: 104px;
+    height: 82px;
+    justify-content: center;
+    padding: 6px;
+  }
+
+  .company-logo img {
+    max-width: 88px;
+    max-height: 56px;
+  }
+
+  .company-logo-uh img {
+    height: 78px;
+    max-height: 78px;
+  }
+
+  .company-logo-aberdeen img {
+    width: 78px;
+    height: 78px;
+    max-height: 78px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1085,41 +1121,6 @@ time {
     min-width: 92px;
   }
 
-  .company-heading {
-    display: contents;
-  }
-
-  .timeline-item {
-    grid-template-columns: 104px minmax(0, 1fr);
-    column-gap: 16px;
-  }
-
-  .timeline-item > p {
-    margin-left: 0;
-  }
-
-  .company-logo {
-    width: 104px;
-    height: 82px;
-    justify-content: center;
-    padding: 6px;
-  }
-
-  .company-logo img {
-    max-width: 92px;
-    max-height: 58px;
-  }
-
-  .company-logo-uh img {
-    height: 78px;
-    max-height: 78px;
-  }
-
-  .company-logo-aberdeen img {
-    width: 78px;
-    height: 78px;
-    max-height: 78px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
