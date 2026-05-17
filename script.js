@@ -210,6 +210,18 @@ document.querySelectorAll(".filter").forEach(button => {
   });
 });
 
+document.querySelectorAll(".abstract-toggle").forEach(button => {
+  button.addEventListener("click", () => {
+    const publication = button.closest(".publication");
+    const panel = publication.querySelector(".abstract-panel");
+    const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+    button.setAttribute("aria-expanded", String(!isExpanded));
+    panel.hidden = isExpanded;
+    updateScrollableLists();
+  });
+});
+
 document.querySelector("#year").textContent = new Date().getFullYear();
 
 window.addEventListener("scroll", updateProgress, { passive: true });
