@@ -836,15 +836,15 @@ dd {
 
 .company-logo-uh img {
   width: auto;
-  height: 65px;
-  max-height: 65px;
+  height: 82px;
+  max-height: 82px;
   border-radius: var(--radius);
 }
 
 .company-logo-aberdeen img {
-  width: 76px;
-  height: 76px;
-  max-height: 76px;
+  width: 88px;
+  height: 88px;
+  max-height: 88px;
   border-radius: 0;
 }
 
@@ -1111,14 +1111,14 @@ time {
   }
 
   .company-logo-uh img {
-    height: 70px;
-    max-height: 70px;
+    height: 78px;
+    max-height: 78px;
   }
 
   .company-logo-aberdeen img {
-    width: 70px;
-    height: 70px;
-    max-height: 70px;
+    width: 78px;
+    height: 78px;
+    max-height: 78px;
   }
 }
 
