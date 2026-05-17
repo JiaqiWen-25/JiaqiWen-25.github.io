@@ -859,8 +859,37 @@ dd {
   padding: 8px;
 }
 
+.company-logo-group {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  display: grid;
+  width: 148px;
+  min-height: 122px;
+  align-content: center;
+  justify-items: center;
+  gap: 8px;
+  padding: 8px;
+}
+
+.company-logo-group .company-logo {
+  width: 132px;
+  height: 34px;
+  padding: 0;
+}
+
+.company-logo-group > img {
+  display: block;
+  max-width: 76px;
+  max-height: 38px;
+  object-fit: contain;
+}
+
 .company-heading > div {
   grid-column: 2;
+}
+
+.company-heading > .company-logo-group {
+  grid-column: 1;
 }
 
 .company-logo img {
@@ -1058,6 +1087,23 @@ time {
     height: 82px;
     justify-content: center;
     padding: 6px;
+  }
+
+  .company-logo-group {
+    width: 104px;
+    min-height: 118px;
+    gap: 7px;
+    padding: 6px;
+  }
+
+  .company-logo-group .company-logo {
+    width: 92px;
+    height: 30px;
+  }
+
+  .company-logo-group > img {
+    max-width: 58px;
+    max-height: 32px;
   }
 
   .company-logo img {
