@@ -603,6 +603,24 @@ dd {
   grid-column: 1;
 }
 
+.venue-label {
+  display: inline-flex;
+  min-height: 26px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  padding: 5px 9px;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+  vertical-align: 0.16em;
+  white-space: nowrap;
+  border-radius: 6px;
+  background: linear-gradient(135deg, var(--accent-strong), var(--coral));
+  box-shadow: 0 8px 18px rgba(6, 78, 86, 0.16);
+}
+
 .ccf-venue {
   display: inline;
   color: #6f4d04;
