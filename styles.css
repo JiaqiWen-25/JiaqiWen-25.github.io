@@ -522,7 +522,6 @@ dd {
 .timeline {
   display: grid;
   gap: 14px;
-  max-height: calc((var(--scroll-item-height) * 5) + (14px * 4));
   padding-right: 8px;
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -532,11 +531,13 @@ dd {
 }
 
 .publication-list {
-  --scroll-item-height: 126px;
+  --scroll-item-height: 176px;
+  max-height: calc((var(--scroll-item-height) * 5) + (14px * 4));
 }
 
 .timeline {
   --scroll-item-height: 166px;
+  max-height: calc((var(--scroll-item-height) * 5) + (14px * 4));
 }
 
 .publication-list::-webkit-scrollbar,
