@@ -215,12 +215,65 @@ document.querySelectorAll(".abstract-toggle").forEach(button => {
     const publication = button.closest(".publication");
     const panel = publication.querySelector(".abstract-panel");
     const isExpanded = button.getAttribute("aria-expanded") === "true";
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    button.setAttribute("aria-expanded", String(!isExpanded));
-    panel.hidden = isExpanded;
+    if (typeof panel.getAnimations === "function") {
+      panel.getAnimations().forEach(animation => animation.cancel());
+    }
+
+    if (isExpanded) {
+      button.setAttribute("aria-expanded", "false");
+
+      if (prefersReducedMotion) {
+        panel.classList.remove("is-open");
+        panel.hidden = true;
+        panel.style.height = "";
+        delete panel.dataset.abstractState;
+        updateScrollableLists();
+        return;
+      }
+
+      panel.dataset.abstractState = "closing";
+      panel.style.height = `${panel.scrollHeight}px`;
+      panel.offsetHeight;
+      panel.classList.remove("is-open");
+      panel.style.height = "0px";
+      panel.addEventListener("transitionend", event => {
+        if (event.propertyName !== "height") return;
+        if (panel.dataset.abstractState !== "closing") return;
+        panel.hidden = true;
+        panel.style.height = "";
+        delete panel.dataset.abstractState;
+        updateScrollableLists();
+      }, { once: true });
+      return;
+    }
+
+    button.setAttribute("aria-expanded", "true");
+    panel.hidden = false;
+    panel.classList.add("is-open");
+
+    if (prefersReducedMotion) {
+      panel.style.height = "";
+      delete panel.dataset.abstractState;
+      updateScrollableLists();
+      return;
+    }
+
+    panel.dataset.abstractState = "opening";
+    panel.style.height = "0px";
+    panel.offsetHeight;
+    panel.style.height = `${panel.scrollHeight}px`;
+    panel.addEventListener("transitionend", event => {
+      if (event.propertyName !== "height") return;
+      if (panel.dataset.abstractState !== "opening") return;
+      panel.style.height = "auto";
+      delete panel.dataset.abstractState;
+      updateScrollableLists();
+    }, { once: true });
     updateScrollableLists();
 
-    if (!isExpanded && window.matchMedia("(max-width: 640px)").matches) {
+    if (window.matchMedia("(max-width: 640px)").matches) {
       panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
   });
