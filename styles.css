@@ -702,6 +702,16 @@ dd {
   font-weight: 800;
 }
 
+.institution-highlight {
+  display: inline-block;
+  padding: 1px 7px;
+  color: var(--accent-strong);
+  font-weight: 900;
+  border: 1px solid rgba(13, 124, 134, 0.24);
+  border-radius: 5px;
+  background: rgba(245, 252, 251, 0.9);
+}
+
 .publication,
 .timeline-item {
   position: relative;
